@@ -4,7 +4,7 @@ $red: #dd3131;
 $darkred: #f90808;
 $semibold: 600;
 $blacktext: #020202;
-
+$ln: 35px;
 body {
   font-family: 'Montserrat', sans-serif;
   padding: 0;
@@ -71,6 +71,10 @@ body {
   text-decoration: none;
   font-weight: $semibold;
 }
+.v-separate {
+  display: block;
+  height: 70px;
+}
 
 .bluecontainer {
   width: 100%;
@@ -115,6 +119,7 @@ body {
         margin-bottom: 20px;
         font-size: 22px;
         font-weight: 300;
+        line-height: $ln;
       }
     }
   }
@@ -146,6 +151,7 @@ body {
     font-size: 22px;
     font-weight: 300;
     text-align: center;
+    line-height: $ln;
   }
 }
 
@@ -192,11 +198,115 @@ body {
           color: #fcfcfc;
           font-size: 22px;
           font-weight: 300;
-          max-width: 60%;
+          max-width: 75%;
           padding: 0;
           margin: 0;
+          line-height: $ln;
+        }
+        &-block2 {
+          max-width: 90%;
         }
       }
+      &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.boxwhite {
+  max-width: calc(100% - 200px);
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  &-info {
+    flex: 4;
+    &--title {
+      color: $blacktext;
+      font-weight: 700;
+      font-size: 32px;
+    }
+    &--desc {
+      &__block {
+        color: $blacktext;
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: 300;
+        line-height: $ln;
+      }
+    }
+  }
+  &-img {
+    flex: 3;
+    text-align: center;
+    img {
+      max-width: 70%;
+    }
+  }
+}
+
+.brand {
+  width: calc(100% - 70px);
+  margin: 50px auto;
+  &-title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 40px;
+    &__main {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-right: 20px;
+      .primary {
+        font-weight: 700;
+        font-size: 88px;
+        color: $white;
+      }
+      .secondary {
+        color: $white;
+        font-weight: 500;
+        font-size: 25px;
+        &__center {
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+    &__number {
+      color: $white;
+      font-size: 298px;
+      font-weight: 700;
+      line-height: 215px;
+    }
+  }
+  &-block {
+    color: $white;
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 20px;
+    line-height: $ln;
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  &-img {
+    margin-bottom: 40px;
+    text-align: center;
+    &__full {
+      max-width: 100%;
+    }
+    &__mid {
+      max-width: 60%;
     }
   }
 }
