@@ -4,7 +4,8 @@ $red: #dd3131;
 $darkred: #f90808;
 $semibold: 600;
 $blacktext: #020202;
-$ln: 35px;
+$ln: 26px;
+$maxwidth: 1440px;
 body {
   font-family: 'Montserrat', sans-serif;
   padding: 0;
@@ -14,11 +15,15 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 90px 40px 40px 40px;
+  padding: 28px 0;
   align-items: center;
   background-color: $darkblue;
+  max-width: $maxwidth;
+  width: 100%;
   &-logo {
-
+    img {
+      max-width: 114px;
+    }
   }
   &-right {
     display: flex;
@@ -28,10 +33,11 @@ body {
       a, a:hover, a:visited, a:active, span {
         color: #a6aaa9;
         text-decoration: none;
+        font-size: 10px;
       }
     }
     &__nearby {
-      font-size: 32px;
+      font-size: 24px;
       color: #fff;
       font-weight: bold;;
     }
@@ -41,6 +47,7 @@ body {
 .slide {
   background-color: $darkblue;
   width: 100%;
+  max-width: $maxwidth;
   &-container {
     max-width: 2700px;
     width: 100%;
@@ -48,7 +55,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right center;
-    height: 800px;
+    height: 415px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,9 +63,12 @@ body {
 
     &-title {
       color: $white;
-      font-size: 74px;
+      font-size: 55px;
       font-weight: 600;
       margin: 20px 0;
+    }
+    img {
+      max-width: 97px;
     }
   }
 }
@@ -66,8 +76,8 @@ body {
 .button, .button:hover, .button:active, .button:visited {
   background-color: $red;
   color: $white;
-  font-size: 17px;
-  padding: 8px 50px;
+  font-size: 13px;
+  padding: 9px 55px;
   text-decoration: none;
   font-weight: $semibold;
 }
@@ -82,8 +92,15 @@ body {
   display: flex;
   justify-content: center;
 }
+.whitecontainer {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
 .box1 {
-  width: calc(100% - 200px);
+  width: 100%;
+  max-width: $maxwidth;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -92,9 +109,10 @@ body {
     flex: 1;
     display: flex;
     position: relative;
+    justify-content: center;
     img {
       max-width: 100%;
-      width: 80%;
+      width: 570px;
       position: absolute;
       top: -100px;
     }
@@ -106,18 +124,19 @@ body {
     &--pretitle {
       color: $darkred;
       font-size: 300;
-      font-size: 16px;
+      font-size: 12px;
+      margin-bottom: 8px;
     }
     &--title {
       color: $white;
       font-weight: 700;
-      font-size: 32px;
+      font-size: 24px;
     }
     &--desc {
       &__block {
         color: $white;
         margin-bottom: 20px;
-        font-size: 22px;
+        font-size: 17px;
         font-weight: 300;
         line-height: $ln;
       }
@@ -126,15 +145,16 @@ body {
 }
 
 .box-clients {
-  max-width: calc(100% - 400px);
-  margin: 270px auto 0 auto;
+  max-width: $maxwidth;
+  width: 100%;
+  margin: 190px auto 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 40px;
   &--banners {
-    max-width: 100%;
+    max-width: 1070px;
     margin: 50px 0 100px 0;
   }
   &--button {
@@ -142,21 +162,23 @@ body {
     margin-bottom: 50px;
   }
   &--lovvett {
-    max-width: 35%;
+    max-width: 390px;
     margin-bottom: 50px;
   }
   &--block {
     color: $blacktext;
     margin-bottom: 20px;
-    font-size: 22px;
+    font-size: 17px;
     font-weight: 300;
     text-align: center;
     line-height: $ln;
+    padding: 0 100px;
   }
 }
 
 .boxnumbers {
-  max-width: calc(100% - 200px);
+  max-width: $maxwidth;
+  width: 100%;
   padding: 40px 0;
   display: flex;
   align-items: center;
@@ -168,7 +190,7 @@ body {
     text-align: center;
     margin-bottom: 30px;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 24px;
   }
   &-numbers {
     display: flex;
@@ -180,7 +202,7 @@ body {
       align-items: center;
       &__number {
         color: $white;
-        font-size: 177px;
+        font-size: 133px;
         font-weight: 700;
         min-width: 120px;
         margin-right: 20px;
@@ -192,11 +214,11 @@ body {
         &-title {
           color: $white;
           font-weight: 600;
-          font-size: 26px;
+          font-size: 20px;
         }
         &-block {
           color: #fcfcfc;
-          font-size: 22px;
+          font-size: 17px;
           font-weight: 300;
           max-width: 75%;
           padding: 0;
@@ -212,14 +234,18 @@ body {
         justify-content: center;
         align-items: center;
         width: 100%;
+        img {
+          max-width: 127px;
+        }
       }
     }
   }
 }
 
 .boxwhite {
-  max-width: calc(100% - 200px);
-  padding: 60px 0;
+  max-width: $maxwidth;
+  width: 100%;
+  padding: 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -229,13 +255,14 @@ body {
     &--title {
       color: $blacktext;
       font-weight: 700;
-      font-size: 32px;
+      font-size: 24px;
     }
     &--desc {
+      padding-right: 100px;
       &__block {
         color: $blacktext;
         margin-bottom: 20px;
-        font-size: 22px;
+        font-size: 17px;
         font-weight: 300;
         line-height: $ln;
       }
@@ -245,13 +272,14 @@ body {
     flex: 3;
     text-align: center;
     img {
-      max-width: 70%;
+      max-width: 365px;
     }
   }
 }
 
 .brand {
-  width: calc(100% - 70px);
+  width: 100%;
+  max-width: $maxwidth;
   margin: 50px auto;
   &-title {
     display: flex;
@@ -266,13 +294,13 @@ body {
       margin-right: 20px;
       .primary {
         font-weight: 700;
-        font-size: 88px;
+        font-size: 66px;
         color: $white;
       }
       .secondary {
         color: $white;
         font-weight: 500;
-        font-size: 25px;
+        font-size: 19px;
         &__center {
           text-align: center;
           width: 100%;
@@ -281,15 +309,15 @@ body {
     }
     &__number {
       color: $white;
-      font-size: 298px;
+      font-size: 224px;
       font-weight: 700;
-      line-height: 215px;
+      line-height: 170px;
     }
   }
   &-block {
     color: $white;
     margin-bottom: 40px;
-    font-size: 22px;
+    font-size: 17px;
     font-weight: 300;
     text-align: center;
     padding: 0 20px;
@@ -307,6 +335,56 @@ body {
     }
     &__mid {
       max-width: 60%;
+    }
+  }
+}
+
+.whiteblue {
+  max-width: $maxwidth;
+  width: 100%;
+  border: 1px solid black;
+  margin: 40px 0;
+  display: flex;
+
+  &-info {
+    padding: 150px 80px;
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    &--title {
+      font-size: 15px;
+      color: black;
+      font-weight: 600;
+      margin: 0 0 10px 0;
+      padding: 0;
+    }
+    &--block {
+      color: black;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: $ln;
+    }
+    &--list {
+      margin: 0 0 0 20px;
+      padding: 0;
+      &__item {
+        font-size: 17px;
+        font-weight: 300;
+        color: black;
+        line-height: $ln;
+      }
+    }
+  }
+  &-img {
+    display: flex;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $darkblue;
+    padding: 100px 60px;
+    img {
+      max-width: 410px;
     }
   }
 }
