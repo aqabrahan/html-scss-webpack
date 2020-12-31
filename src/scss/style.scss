@@ -94,6 +94,10 @@ body {
   background-color: $darkblue;
   display: flex;
   justify-content: center;
+  &__column {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .whitecontainer {
   width: 100%;
@@ -631,11 +635,140 @@ body {
       }
     }
     &__right {
+      padding-right: 10px;
+      padding-left: 230px;
+      .text {
+        padding-top: 50px;
+        padding-right: 10px;
+        .block {
+          text-align: right;
+        }
+      }
     }
   }
 }
 
+.form {
+  display: flex;
+  width: 100%;
+  max-width: $maxwidth;
+  padding: 50px 30px;
+  background-color: $gray;
+  justify-content: center;
+  align-items: center;
+  &-info {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 35px;
+    flex: 1;
+    img {
+      max-width: 223px;
+    }
+    .block {
+      text-align: right;
+      padding-right: 3px;
+      color: $white;
+    }
+  }
+  &-contact {
+    flex: 1;
+    display: flex;
+    form {
+      width: 100%;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  max-width: $maxwidth;
+  padding: 50px 30px;
+  background-color: $gray;
+  justify-content: center;
+  align-items: flex-start;
+  &-box {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    &--title {
+      color: $white;
+      margin: 0 0 3px 0;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    &--desc {
+      .block {
+        text-align: left;
+        font-size: 11px;
+        line-height: 22px;
+      }
+    }
+    &--img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 20px;
+      .in {
+        width: 48px;
+      }
+      .chevron {
+        width: 90px;
+      }
+    }
+    &__img {
+      flex: .5;
+    }
+  }
+}
+
+.copyright {
+  display: flex;
+  width: 100%;
+  max-width: $maxwidth;
+  padding: 0 30px 30px;
+  background-color: $gray;
+  justify-content: center;
+  align-items: center;
+  .block {
+    color: #f9f7f7;
+    font-size: 10px;
+  }
+}
+
 // common
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  label {
+    color: #fcfcfc;
+    font-size: 11px;
+    padding-bottom: 5px;
+  }
+  &-input {
+    background-color: $gray;
+    color: #f5f5f5;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #f5f5f5;
+    width: 60%;
+    padding: 5px;
+    &__textarea {
+      height: 40px;
+    }
+  }
+  .button {
+    border: none;
+
+  }
+  &__action {
+    display: block;
+    text-align: center;
+  }
+}
 .profile {
   color: $white;
   display: flex;
