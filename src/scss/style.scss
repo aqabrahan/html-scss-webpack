@@ -1,3 +1,5 @@
+@import 'mix';
+
 $darkblue: #00051b;
 $white: #fff;
 $red: #dd3131;
@@ -32,6 +34,7 @@ body {
     align-items: center;
     &__lang {
       margin-right: 20px;
+      display: none;
       a, a:hover, a:visited, a:active, span {
         color: #a6aaa9;
         text-decoration: none;
@@ -42,6 +45,16 @@ body {
       font-size: 24px;
       color: #fff;
       font-weight: bold;;
+    }
+  }
+  @include tablet {
+    padding: 15px;
+    &-right {
+      flex-direction: column;
+      align-items: flex-end;
+      &__nearby {
+        display: none;
+      }
     }
   }
 }
@@ -74,6 +87,16 @@ body {
       max-width: 97px;
     }
   }
+  @include tablet {
+    &-container {
+      &-title {
+        text-align: center;
+      }
+      img {
+        display: none;
+      }
+    }
+  }
 }
 
 .button, .button:hover, .button:active, .button:visited {
@@ -83,10 +106,16 @@ body {
   padding: 9px 55px;
   text-decoration: none;
   font-weight: $semibold;
+  @include tablet {
+    padding: 9px 20px;
+  }
 }
 .v-separate {
   display: block;
   height: 70px;
+  @include tablet {
+    height: 5px;
+  }
 }
 
 .bluecontainer {
@@ -149,6 +178,16 @@ body {
       }
     }
   }
+  @include tablet {
+    flex-direction: column;
+    &-img {
+      img {
+        position: relative;
+        top: auto;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
 .box-clients {
@@ -180,6 +219,23 @@ body {
     text-align: center;
     line-height: $ln;
     padding: 0 100px;
+  }
+  @include tablet {
+    margin: 10px 0;
+    &--banners {
+      max-width: 100%;
+      margin: 20px 0;
+    }
+    &--button {
+      margin-bottom: 10px;
+    }
+    &--lovvett {
+      max-width: 100%;
+      margin: 10px 0;
+    }
+    &--block {
+      padding: 0;
+    }
   }
 }
 
@@ -247,6 +303,18 @@ body {
       }
     }
   }
+  @include tablet {
+    padding: 10px 30px;
+    &-title {
+      max-width: 100%;
+    }
+    &-numbers {
+      &--box {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
 .boxwhite {
@@ -280,6 +348,23 @@ body {
     text-align: center;
     img {
       max-width: 365px;
+    }
+  }
+  @include tablet {
+    flex-direction: column;
+    padding: 20px 15px;
+    width: calc(100% - 30px);
+    &-info {
+      flex: 1;
+      &--desc {
+        padding: 0;
+      }
+    }
+    &-img {
+      flex: 1;
+      img {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -345,6 +430,30 @@ body {
       max-width: 60%;
     }
   }
+  @include tablet {
+    margin: 20px 0;
+    &-title {
+      &__main {
+        .primary {
+          font-size: 28px;
+        }
+      }
+      &__number {
+        font-size: 120px;
+        line-height: 100px;
+      }
+    }
+    &-img {
+      margin-bottom: 10px;
+      &__mid {
+        max-width: calc(100% - 30px);
+      }
+    }
+    &-block {
+      padding: 0 15px;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .whiteblue {
@@ -406,6 +515,21 @@ body {
       border: 1px solid $white;
     }
   }
+  @include tablet {
+    flex-direction: column-reverse;
+    padding: 0 15px;
+    width: calc(100% - 30px);
+    &-info {
+      padding: 20px;
+      border-right: 1px solid black;
+    }
+    &-img {
+      padding: 20px;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
 }
 
 .full-banner {
@@ -423,6 +547,16 @@ body {
     margin-bottom: 20px;
     img {
       max-width: 100%;
+    }
+  }
+  @include tablet {
+    width: calc(100% - 30px);
+    padding: 15px;
+    &--title {
+      padding: 0 0 10px 0;
+      img {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -490,6 +624,58 @@ body {
   &__blue {
     background-color: $darkblue;
   }
+  @include tablet {
+    width: calc(100% - 30px);
+    padding: 15px;
+    flex-direction: column;
+    &-box {
+      width: 100%;
+      &--title {
+        padding: 0;
+        img {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+      &--block {
+        padding: 10px 0;
+        .block {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+
+      &__row {
+        flex-direction: column;
+        .column-banner-box--block {
+          padding: 10px 15px;
+          width: calc(100% - 30px);
+        }
+        .column-banner-box--title {
+          width: 100%;
+          text-align: center;
+          padding: 10px 0;
+          img {
+            margin-left: 0;
+            max-width: 100%;
+          }
+        }
+      }
+      &__seven {
+        padding: 20px 0;
+        .column-banner-box--block {
+          padding: 15px;
+        }
+        .column-banner-box--title {
+          img {
+            margin-left: 0;
+            width: 388px;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
 .channel {
@@ -545,6 +731,38 @@ body {
       max-width: 1150px;
     }
   }
+  @include tablet {
+    width: calc(100% - 30px);
+    padding: 15px;
+    &-link {
+      margin: 30px 0;
+    }
+    &-title {
+      flex-direction: column;
+      &--img {
+        justify-content: center;
+        img {
+          max-width: 40%;
+        }
+      }
+    }
+    &-titlewrap {
+      &--main {
+        font-size: 35px;
+        margin-bottom: 7px;
+      }
+      &--subtitle {
+        font-size: 17px;
+        margin-bottom: 7px;
+      }
+    }
+    &-banner {
+      padding-bottom: 10px;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
 }
 
 .analytics {
@@ -591,6 +809,28 @@ body {
     flex: 1;
     padding-left: 20px;
   }
+  @include tablet {
+    width: calc(100% - 30px);
+    padding: 15px;
+    flex-direction: column;
+    &-title {
+      &__main {
+        .primary {
+          font-size: 28px;
+        }
+        .secondary {
+          text-align: right;
+        }
+      }
+      &__number {
+        font-size: 128px;
+        line-height: 100px;
+      }
+    }
+    &-list {
+      padding: 20px 0;
+    }
+  }
 }
 
 .eleven {
@@ -600,6 +840,10 @@ body {
   padding: 30px;
   img {
     max-width: 100%;
+  }
+  @include tablet {
+    width: calc(100% - 30px);
+    padding: 15px;
   }
 }
 
@@ -646,6 +890,31 @@ body {
       }
     }
   }
+  @include tablet {
+    width: calc(100% - 30px);
+    padding: 40px 15px;
+    &-title {
+      text-align: center;
+      font-size: 30px;
+    }
+    &-message {
+      flex-direction: column;
+      .profile {
+        padding:  15px 0;
+      }
+      .text {
+        padding: 0;
+      }
+      &__right {
+        padding: 20px 0 0 0;
+        flex-direction: column-reverse;
+        .text {
+          padding-top: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
 }
 
 .form {
@@ -661,7 +930,7 @@ body {
     align-items: flex-end;
     flex-direction: column;
     padding-right: 35px;
-    flex: 1;
+    flex: 0.80;
     img {
       max-width: 223px;
     }
@@ -676,6 +945,19 @@ body {
     display: flex;
     form {
       width: 100%;
+    }
+  }
+  @include tablet {
+    width: calc(100% - 30px);
+    padding: 20px 15px;
+    flex-direction: column;
+    &-info {
+      padding: 0;
+      align-items: center;
+    }
+    &-contact {
+      width: 100%;
+      padding-top: 30px;
     }
   }
 }
@@ -721,6 +1003,25 @@ body {
       flex: .5;
     }
   }
+  @include tablet {
+    width: calc(100% - 30px);
+    padding: 0 15px;
+    flex-direction: column;
+    &-box {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+      &--title {
+        font-size: 16px;
+      }
+      &--desc {
+        .block {
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 
 .copyright {
@@ -734,6 +1035,9 @@ body {
   .block {
     color: #f9f7f7;
     font-size: 10px;
+  }
+  @include tablet {
+    padding: 0;
   }
 }
 
@@ -758,6 +1062,9 @@ body {
     padding: 5px;
     &__textarea {
       height: 40px;
+    }
+    @include tablet {
+      width: calc(100% - 10px);
     }
   }
   .button {
