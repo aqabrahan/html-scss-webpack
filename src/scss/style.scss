@@ -32,15 +32,6 @@ body {
   &-right {
     display: flex;
     align-items: center;
-    &__lang {
-      margin-right: 20px;
-      display: none;
-      a, a:hover, a:visited, a:active, span {
-        color: #a6aaa9;
-        text-decoration: none;
-        font-size: 10px;
-      }
-    }
     &__nearby {
       font-size: 24px;
       color: #fff;
@@ -81,7 +72,13 @@ body {
       color: $white;
       font-size: 55px;
       font-weight: 600;
-      margin: 20px 0;
+      margin: 20px 0 0;
+    }
+    &-subtitle {
+      color: $white;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
     img {
       max-width: 97px;
@@ -94,6 +91,9 @@ body {
       }
       img {
         display: none;
+      }
+      &-subtitle {
+        text-align: center;
       }
     }
   }
@@ -180,11 +180,15 @@ body {
   }
   @include tablet {
     flex-direction: column;
+    padding-top: 20px;
     &-img {
       img {
-        position: relative;
-        top: auto;
         margin-bottom: 20px;
+        max-width: 100%;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        top: 0;
       }
     }
   }
@@ -297,6 +301,7 @@ body {
         justify-content: center;
         align-items: center;
         width: 100%;
+        padding: 40px 0 30px;
         img {
           max-width: 127px;
         }
@@ -432,6 +437,7 @@ body {
   }
   @include tablet {
     margin: 20px 0;
+    padding: 0 15px;
     &-title {
       &__main {
         .primary {
@@ -509,16 +515,21 @@ body {
     background-color: $darkblue;
     padding: 100px 60px;
     img {
-      max-width: 410px;
+      max-width: 350px;
     }
     &__white {
       border: 1px solid $white;
+      padding: 30px;
+      img {
+        max-width: 500px;
+      }
     }
   }
   @include tablet {
     flex-direction: column-reverse;
     padding: 0 15px;
     width: calc(100% - 30px);
+    height: 100%;
     &-info {
       padding: 20px;
       border-right: 1px solid black;
@@ -532,50 +543,30 @@ body {
   }
 }
 
-.full-banner {
-  width: 100%;
-  max-width: $maxwidth;
-  padding: 30px;
-  &--title {
-    padding: 0 30px;
-    img {
-      max-width: 750px;
-    }
-  }
-  &--image {
-    max-width: 100%;
-    margin-bottom: 20px;
-    img {
-      max-width: 100%;
-    }
-  }
-  @include tablet {
-    width: calc(100% - 30px);
-    padding: 15px;
-    &--title {
-      padding: 0 0 10px 0;
-      img {
-        max-width: 100%;
-      }
-    }
-  }
-}
-
 .column-banner {
   width: 100%;
   max-width: $maxwidth;
   padding: 30px 30px 0 30px;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
   &-box {
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 0 30px;
     &--title {
-      padding: 90px 0 0 0;
+      padding: 30px 0 0 0;
       img {
         max-width: 90%;
         width: 485px;
+      }
+      &__4 {
+        padding-top: 30px;
+        img {
+          max-width: 90%;
+          width: 510px;
+        }
       }
     }
     &--banner {
@@ -588,6 +579,12 @@ body {
         text-align: left;
         max-width: 90%;
         width: 485px;
+        margin-bottom: 30px;
+      }
+      .block__right {
+        text-align: right !important;
+        width: 100%;
+        max-width: 100%;
       }
       &__title {
         color: #666;
@@ -620,27 +617,44 @@ body {
         }
       }
     }
+    &__blue {
+      background-color: $darkblue;
+      padding-bottom: 30px;
+    }
   }
   &__blue {
     background-color: $darkblue;
+  }
+  &__fluid {
+    margin-bottom: 0;
   }
   @include tablet {
     width: calc(100% - 30px);
     padding: 15px;
     flex-direction: column;
+    height: 100%;
     &-box {
       width: 100%;
+      padding: 0;
+      height: 100%;
       &--title {
         padding: 0;
+        height: auto;
         img {
           width: 100%;
           max-width: 100%;
+        }
+        &__4 {
+          padding-top: 0;
+          max-height: 100%;
+          img {
+            width: 100%;
+          }
         }
       }
       &--block {
         padding: 10px 0;
         .block {
-          max-width: 100%;
           width: 100%;
         }
       }
@@ -673,6 +687,11 @@ body {
             max-width: 100%;
           }
         }
+      }
+      &__blue {
+        background-color: $darkblue;
+        padding: 30px;
+        width: calc(100% - 60px);
       }
     }
   }
@@ -707,7 +726,7 @@ body {
   &-titlewrap {
     display: flex;
     flex-direction: column;
-    flex: 2;
+    flex: 5;
     &--main {
       font-size: 50px;
       font-weight: 700;
@@ -743,6 +762,8 @@ body {
         justify-content: center;
         img {
           max-width: 40%;
+          width: 100%;
+          height: 100%;
         }
       }
     }
@@ -765,91 +786,9 @@ body {
   }
 }
 
-.analytics {
-  display: flex;
-  width: 100%;
-  max-width: $maxwidth;
-  padding: 30px 30px 50px 30px;
-
-  &-title {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
-    flex: 1;
-    &__main {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      margin-right: 20px;
-      .primary {
-        font-weight: 700;
-        font-size: 60px;
-        color: $white;
-      }
-      .secondary {
-        color: $white;
-        font-weight: 500;
-        font-size: 15px;
-        &__center {
-          text-align: center;
-          width: 100%;
-        }
-      }
-    }
-    &__number {
-      color: $white;
-      font-size: 224px;
-      font-weight: 700;
-      line-height: 170px;
-    }
-  }
-  &-list {
-    display: flex;
-    flex: 1;
-    padding-left: 20px;
-  }
-  @include tablet {
-    width: calc(100% - 30px);
-    padding: 15px;
-    flex-direction: column;
-    &-title {
-      &__main {
-        .primary {
-          font-size: 28px;
-        }
-        .secondary {
-          text-align: right;
-        }
-      }
-      &__number {
-        font-size: 128px;
-        line-height: 100px;
-      }
-    }
-    &-list {
-      padding: 20px 0;
-    }
-  }
-}
-
-.eleven {
-  display: flex;
-  width: 100%;
-  max-width: $maxwidth;
-  padding: 30px;
-  img {
-    max-width: 100%;
-  }
-  @include tablet {
-    width: calc(100% - 30px);
-    padding: 15px;
-  }
-}
-
 .about {
   display: flex;
-  width: 100%;
+  width: calc(100% - 60px);
   max-width: $maxwidth;
   padding: 100px 30px;
   flex-direction: column;
@@ -1104,6 +1043,14 @@ body {
   &__blue {
     color: white;
   }
+  &__right {
+    text-align: right;
+  }
+  @include tablet {
+    &__right {
+      text-align: left;
+    }
+  }
 }
 
 .list {
@@ -1120,5 +1067,19 @@ body {
   }
   &__clean {
     list-style: none;
+  }
+  &__right {
+    li {
+      text-align: right;
+      list-style: inside;
+    }
+  }
+  @include tablet {
+    &__right {
+      li {
+        text-align: left !important;
+        list-style: outside;
+      }
+    }
   }
 }
