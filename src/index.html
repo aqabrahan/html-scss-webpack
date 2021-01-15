@@ -7,11 +7,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/icon" href="assets/images/favicon.png">
 </head>
 <body>
   <div class="bluecontainer">
     <header class="header">
-      <a href="" class="header-logo">
+      <a href="http://blink-srl.com/" class="header-logo">
         <img src="assets/images/logo.png" alt="Blink" />
       </a>
       <div class="header-right">
@@ -182,9 +183,6 @@
         <p>The best designs instill confidence in your product and brand. They inspire users to download, engage, and evangelize. Our digitally native designers create uniquely beautiful and functional work grounded in results-oriented best practices.</p>
       </div>
       <div class="brand-img">
-        <img class="brand-img__mid" src="assets/images/brand.png" alt="" />
-      </div>
-      <div class="brand-img">
         <img class="brand-img__full" src="assets/images/brand2.png" alt="" />
       </div>
       <div class="brand-block">
@@ -193,6 +191,9 @@
         </p>
         <p>A simple but forceful message, a close tone and vibrant colors, an interface that invites navigation in a playful way.  </p>
         <p>Every point of contact with the consumer are embed with this spirit, such as the website that is also designed to generates leads</p>
+      </div>
+      <div class="brand-img">
+        <img class="brand-img__full" src="assets/images/banner4.png" alt="" />
       </div>
       <div class="v-separate"></div>
       <div class="brand-title">
@@ -205,7 +206,7 @@
       <div class="brand-block">
         <p class="block block__blue">Develop and deploy the microservices oriented backend systems for the MVP and then scale it for prodcution.
         </p>
-        <p class="block block__blue">Based on the prooven blink  accelarator architecture, we develop and deploy cloud microservices to support high scalabilit</p>
+        <p class="block block__blue">Based on the prooven blink  accelarator architecture, we develop and deploy cloud microservices to support high scalability</p>
       </div>
       <div class="brand-img">
         <img class="brand-img__full" src="assets/images/gateway.png" alt="" />
@@ -280,37 +281,43 @@
       </div>
     </section>
   </div>
-  <div class="whitecontainer">
-    <section class="column-banner column-banner__fluid">
-      <div class="column-banner-box column-banner-box__blue">
-        <div class="column-banner-box--title">
-          <img src="assets/images/6.png" alt="blink" />
+  <div class="fluid">
+    <div class="fluid--first">
+      <section class="column-banner column-banner__fluid column-banner__single">
+        <div class="column-banner-box column-banner-box__blue">
+          <div class="column-banner-box--title">
+            <img src="assets/images/6.png" alt="blink" />
+          </div>
+          <div class="column-banner-box--block">
+            <p class="block block__blue">We help to make decisions based on data, processing large volumes of information through Big Data Analytics.</p>
+            <ul class="list">
+              <li>Business oriented dashboards and metrics</li>
+              <li>Metrics and boards oriented to measure the customer journey</li>
+              <li>Metrics and boards oriented to measure the usability of the applications</li>
+              <li>Metrics and boards oriented to measure the marketing campings</li>
+            </ul>
+          </div>
         </div>
-        <div class="column-banner-box--block">
-          <p class="block block__blue">We help to make decisions based on data, processing large volumes of information through Big Data Analytics.</p>
-          <ul class="list">
-            <li>Business oriented dashboards and metrics</li>
-            <li>Metrics and boards oriented to measure the customer journey.</li>
-            <li>Metrics and boards oriented to measure the usability of the applications</li>
-            <li>Metrics and boards oriented to measure the marketing campings</li>
-          </ul>
-        </div>
-      </div>
+      </section>
+    </div>
+    <div class="fluid--second">
       <div class="column-banner-box column-banner-box__seven">
         <div class="column-banner-box--title">
           <img src="assets/images/7.png" alt="blink" />
         </div>
         <div class="column-banner-box--block">
-          <p class="block">Develop and set up the devops infrastructure to support the devops cycles
-            Continuous deployment
+          <p class="block">We apply AI and other segmentation techniques to help you understand who your customers are and to personalize the offer according to their interests
           </p>
           <ul class="list list__blue">
-            <li>Operational metrics and alerts Log centralization and alertsDevelop and set up the devoAgile methodology tools</li>
+            <li>Geo-targeting & Geofecncing</li>
+            <li>AI & ML based Segmentations</li>
+            <li>Behavioural segmentation</li>
           </ul>
         </div>
       </div>
-    </section>
+    </div>
   </div>
+
 
   <div class="bluecontainer">
     <section class="channel">
@@ -340,7 +347,7 @@
   <div class="bluecontainer">
     <section class="whiteblue">
       <div class="whiteblue-info whiteblue-info__white">
-        <h4 class="whiteblue-info--title">SOFTWARE MARKETING STUDIO</h4>
+        <h4 class="whiteblue-info--title">STRATEGIC MARKETING STUDIO</h4>
         <ul class="whiteblue-info--list">
           <li class="whiteblue-info--list__item">Marketing Automation & Lifecycle Campaigns</li>
           <li class="whiteblue-info--list__item">A/B Testing & Workflow Optimizations</li>
@@ -392,30 +399,34 @@
         <p class="block">
           Contact us!<br/>
           We can accelerate<br/>
-          the innovativeprocess<br/>
+          the innovative process<br/>
           within your company<br/>
         </p>
       </div>
       <div class="form-contact">
-        <form>
+        <form class="formcontact" id="formcontact">
           <div class="field">
             <label for="name">Name*</label>
-            <input class="field-input" type="text" name="name" id="name" />
+            <input required class="field-input" type="text" name="name" id="name" />
           </div>
           <div class="field">
             <label for="email">Email*</label>
-            <input class="field-input" type="text" name="email" id="email" />
+            <input required class="field-input" type="email" name="email" id="email" />
           </div>
           <div class="field">
             <label for="mobile">Mobile number*</label>
-            <input class="field-input" type="text" name="mobile" id="mobile" />
+            <input required class="field-input" type="text" name="phone" id="mobile" />
           </div>
           <div class="field">
             <label for="message">Message*</label>
-            <textarea class="field-input field-input__textarea" name="message" id="message"></textarea>
+            <textarea required class="field-input field-input__textarea" name="message" id="message"></textarea>
           </div>
           <div class="field field__action">
-            <button type="submit" class="button">SEND</button>
+            <img class="loading" src="assets/images/loading.gif" alt="" />
+            <button type="submit" class="button  btn-send">SEND</button>
+          </div>
+          <div class="alert">
+            Error asd asdaas
           </div>
         </form>
       </div>
@@ -470,12 +481,12 @@
       </div>
       <div class="footer-box footer-box__img">
         <div class="footer-box--img">
-          <img class="in" src="assets/images/linkedin.png" alt="" />
+          <a target="_blank" href="https://www.linkedin.com/company/blink-nearby-technology"><img class="in" src="assets/images/linkedin.png" alt="" /></a>
         </div>
       </div>
       <div class="footer-box footer-box__img">
         <div class="footer-box--img">
-          <img class="chevron" src="assets/images/chevron.png" alt="" />
+          <a href="http://blink-srl.com/"><img class="chevron" src="assets/images/chevron.png" alt="" /></a>
         </div>
       </div>
     </section>
@@ -483,5 +494,46 @@
       <p class="block block__blue">BLINK SRL. 2020 ALL RIGHTS RESERVED</p>
     </section>
   </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script>
+    $(function() {
+        $('.formcontact').submit(function(e) {
+          $('.loading').show();
+          $('.btn-send').attr('disabled', true);
+          e.preventDefault(); // prevent form from reloading page
+          const serialize = $('.formcontact').serializeArray()
+          let body = {};
+          serialize.forEach(element => {
+            body = {
+              ...body,
+              [element.name]: element.value,
+            }
+          });
+          $.ajax({
+            url : 'https://lovvett-backend.herokuapp.com/application/v1/contacts',
+            type : 'PUT',
+            crossDomain: true,
+            error: function() {
+              $('.alert').removeClass('success').addClass('error').text('Error, please try in a moment.').show();
+              setTimeout(() => {
+                $('.alert').hide();
+              }, 4000);
+              $('.loading').hide();
+              $('.btn-send').attr('disabled', false);
+            },
+            data: body,
+            success : function(data) {
+              $('.loading').hide();
+              $('.btn-send').attr('disabled', false);
+              $('.alert').removeClass('error').addClass('success').text('The message was sent successfully.').show();
+              setTimeout(() => {
+                $('.alert').hide();
+              }, 4000);
+              document.getElementById('formcontact').reset();
+            }
+          });
+        });
+    });
+  </script>
 </body>
 </html>
